@@ -135,31 +135,30 @@ p {
   color: var(--color-White);
 }
 /* 404 Page */
-.Page-404 {
-  padding: 5rem 2rem;
+.container {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
 }
-.Page-404__Main {
+.error404 {
   background-color: var(--color-primaray100);
-  padding: 10rem 0 10rem 0;
-  width: 100%;
-  height: 36.2%;
   border-radius: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Page-404__Main__Txt {
-  height: 10.4%;
-  width: 100%;
-}
-.Page-404__Main__Txt__Title {
-  color: var(--color-White);
+  padding: 12.9rem 0;
   text-align: center;
 }
-.Page-404__Main__Txt__description-404 {
+.error404__title {
+  font-size: var(--font-size-H5);
+  color: var(--color-White);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.error404__message {
   font-size: var(--font-size-P2);
   color: var(--color-White);
-  text-align: center;
+  font-weight: 200;
+}
+.error404__link {
+  color: var(--color-White);
+  text-decoration: none;
 }
 /* Scroll */
 ::-webkit-scrollbar {
@@ -176,69 +175,4 @@ p {
   margin: 5px;
   background-color: var(--color-primaray100);
   /* display: none; */
-}
-@media screen and (min-width: 812px) {
-  /* 404 Page */
-  .Page-404 {
-    padding: 5rem 4rem;
-  }
-  .Page-404__Main {
-    background-color: var(--color-primaray100);
-    padding: 10rem 0 10rem 0;
-    width: 100%;
-    height: 36.2%;
-    border-radius: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Page-404__Main__Txt {
-    height: 10.4%;
-    width: 100%;
-  }
-  .Page-404__Main__Txt__Title {
-    color: var(--color-White);
-    text-align: center;
-    font-size: var(--font-size-H3);
-  }
-  .Page-404__Main__Txt__description-404 {
-    color: var(--color-White);
-    text-align: center;
-    font-size: var(--font-size-Body2);
-    font-weight: var(--font-weight-Body);
-  }
-  br {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* 404 Page */
-  .Page-404 {
-    padding: 5rem 10rem;
-  }
-  .Page-404__Main {
-    background-color: var(--color-primaray100);
-    padding: 10rem 0 10rem 0;
-    width: 100%;
-    height: 36.2%;
-    border-radius: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Page-404__Main__Txt {
-    height: 10.4%;
-    width: 100%;
-  }
-  .Page-404__Main__Txt__Title {
-    color: var(--color-White);
-    text-align: center;
-    font-size: var(--font-size-H2);
-  }
-  .Page-404__Main__Txt__description-404 {
-    color: var(--color-White);
-    text-align: center;
-    font-size: var(--font-size-P1);
-    font-weight: var(--font-weight-P);
-  }
 }
