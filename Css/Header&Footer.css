@@ -71,6 +71,7 @@ html {
 body {
   font-size: var(--font-size-Body1);
   font-weight: var(--font-weight-Body);
+  min-height: 100dvh;
 }
 .body2 {
   font-size: var(--font-size-Body2);
