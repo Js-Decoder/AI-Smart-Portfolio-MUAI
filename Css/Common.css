@@ -71,6 +71,7 @@ html {
 body {
   font-size: var(--font-size-Body1);
   font-weight: var(--font-weight-Body);
+  min-height: 100dvh;
 }
 .body2 {
   font-size: var(--font-size-Body2);
@@ -103,7 +104,7 @@ p {
 /* Buttons */
 .btn {
   border-radius: 15px 50px 15px 50px;
-  padding: 1.6rem 2rem 1.6rem 2rem;
+  padding: 1.6rem 2rem;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -133,4 +134,13 @@ p {
   border: 1.5px solid var(--color-White);
   background-color: var(--color-transpatent);
   color: var(--color-White);
+}
+.btn--sixth {
+  padding: 1rem 2rem;
+  background-color: var(--color-transpatent);
+  color: var(--color-White);
+  border: 0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: block;
 }
