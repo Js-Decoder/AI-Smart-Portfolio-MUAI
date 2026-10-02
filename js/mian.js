@@ -1,12 +1,12 @@
-const toggler = document.querySelector('.nav__toggler');
-const navbar = document.querySelector('.nav');
+const toggler = document.querySelector(".nav__toggle");
+const navbar = document.querySelector(".nav");
 const delBr404 = document.querySelector(
-  '.Page-404__Main__Txt__description-404',
+  ".Page-404__Main__Txt__description-404",
 );
-const boxErorr404 = document.querySelector('.Page-404__Main__Txt');
+const boxErorr404 = document.querySelector(".Page-404__Main__Txt");
 const widthScreen = screen.availWidth;
-toggler.addEventListener('click', (e) => {
-  navbar.classList.toggle('nav__expanded');
+toggler.addEventListener("click", (e) => {
+  navbar.classList.toggle("nav__expanded");
 });
 // if (widthScreen <= 812) {
 //   addBr404Des();

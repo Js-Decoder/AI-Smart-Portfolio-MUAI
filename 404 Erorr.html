@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Error - MUAI</title>
     <link rel="stylesheet" href="./Css/Fonts.css" />
+    <link rel="stylesheet" href="./Css/Common.css" />
     <link rel="stylesheet" href="./Css/Header&Footer.css" />
     <link rel="stylesheet" href="./Css/404Page.css" />
   </head>
   <body>
     <header class="main-header">
       <nav class="nav container">
-        <a href="./Home.html" class="Title" style="text-decoration: none">MUAI</a>
-        <div class="nav__toggler">
+        <a href="./Home.html" class="nav__logo" style="text-decoration: none"
+          >MUAI</a
+        >
+        <button
+  class="nav__toggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="main-navigation"
+>
           <div class="bar bar-one"></div>
-          <div class="bar bar-two"></div>
-        </div>
+          <div class="bar bar-two"></div></button>
         <ul class="list nav__list">
           <li class="nav__item"><a href="./Home.html">Home</a></li>
           <li class="nav__item"><a href="./Princing.html">Princing</a></li>
@@ -29,8 +37,8 @@
               href="#"
               class="btn btn--primary"
               style="
-                font-size: var(--font-size-Body2);
-                color: var(--color-White);
+                font-size: var(--font-size-body2);
+                color: var(--color-white);
                 padding: 1.3rem;
               "
               >Get Started</a
@@ -43,59 +51,53 @@
       <div class="error404">
         <p class="error404__title">404</p>
         <p class="error404__message">
-          Well, something is not right here.<br /><a class="error404__link" href="./Home.html" >back to home!</a>
+          Well, something is not right here.<br /><a
+            class="error404__link"
+            href="./Home.html"
+            >back to home!</a
+          >
         </p>
       </div>
     </section>
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__fade-primary-color"></div>
+        <div class="footer__glow"></div>
+        <p class="footer__logo">MUAI</p>
         <div class="footer__pages">
-          <p
-            style="
-              margin-bottom: 2rem;
-              font-size: 2.8rem;
-              color: var(--color-White);
-              text-align: center;
-            "
-          >
-            MUAI
-          </p>
-          <button class="btn--sixth">
-            <a href="./Home.html" class="footer__link">Home</a>
-          </button>
-          <button class="btn--sixth">
-            <a href="./Princing.html" class="footer__link">Princing</a>
-          </button>
-          <button class="btn--sixth">
-            <a href="./About.html" class="footer__link">About</a>
-          </button>
-          <button class="btn--sixth">
-            <a href="./Contact.html" class="footer__link">Contact</a>
-          </button>
-          <button class="btn btn--primary" style="margin-top: 2rem">
-            <a href="#" style="text-decoration: none; color: var(--color-White)"
-              >Get Started</a
-            >
-          </button>
+          <a href="./Home.html" class="footer__link">Home</a>
+          <a href="./Princing.html" class="footer__link">Princing</a>
+          <a href="./About.html" class="footer__link">About</a>
+          <a href="./Contact.html" class="footer__link">Contact</a>
+          <a class="btn btn--primary footer__cta" href="#">Get Started</a>
         </div>
         <div class="footer__contact-us">
-          <a class="contact-us--link" href="mailto:youremail@mail.com"
+          <a class="footer__contact-link" href="mailto:youremail@mail.com"
             ><img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
             />youremail@mail.com</a
-          ><a class="contact-us--link" href="https://instagram.com"
+          ><a class="footer__contact-link" href="https://instagram.com"
             ><img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
             />instagram</a
-          ><a class="contact-us--link" href="https://maps.google.com"
+          ><a class="footer__contact-link" href="https://maps.google.com"
             ><img
               src="./Assets/Icon/Vector (1).svg"
               class="footer__contact-icons"
             />Loction</a
           >
+        </div>
+        <div class="footer__lineBetween"></div>
+        <div class="footer__joinUpdates">
+          <p class="joinUpdates__Title">Join to get free updates every week.</p>
+          <form class="joinUpdates__InputContainer">
+            <input
+              class="joinUpdates__emailInput"
+              type="email"
+              placeholder="Email Address"
+            /><button class="btn btn--primary" type="submit">Subscribe</button>
+          </form>
         </div>
         <div class="footer__copyright">
           <p>&copy;2023 MU.AI</p>
