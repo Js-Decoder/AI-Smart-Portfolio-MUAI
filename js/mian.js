@@ -1,4 +1,4 @@
-const toggler = document.querySelector(".nav__toggler");
+const toggler = document.querySelector(".nav__toggle");
 const navbar = document.querySelector(".nav");
 const delBr404 = document.querySelector(
   ".Page-404__Main__Txt__description-404",
