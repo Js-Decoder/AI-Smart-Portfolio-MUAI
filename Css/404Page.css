@@ -1,6 +1,6 @@
 /* 404 Page */
 .container {
-  width: min(100% - 2rem, 72rem);
+  width: clamp(39rem, 1.2rem + 73vw, 100rem);
   margin-inline: auto;
 }
 .error404 {

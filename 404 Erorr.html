@@ -13,7 +13,7 @@
   <body>
     <header class="main-header">
       <nav class="nav container">
-        <a href="./Home.html" class="Title" style="text-decoration: none">MUAI</a>
+        <a href="./Home.html" class="nav__logo" style="text-decoration: none">MUAI</a>
         <div class="nav__toggler">
           <div class="bar bar-one"></div>
           <div class="bar bar-two"></div>
@@ -50,53 +50,41 @@
     </section>
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__fade-primary-color"></div>
-        <div class="footer__pages">
-          <p
-            style="
-              margin-bottom: 2rem;
-              font-size: 2.8rem;
-              color: var(--color-White);
-              text-align: center;
-            "
+        <div class="footer__glow"></div>
+        <p
+            class="footer__logo"
           >
             MUAI
           </p>
-          <button class="btn--sixth">
+        <div class="footer__pages">
             <a href="./Home.html" class="footer__link">Home</a>
-          </button>
-          <button class="btn--sixth">
             <a href="./Princing.html" class="footer__link">Princing</a>
-          </button>
-          <button class="btn--sixth">
             <a href="./About.html" class="footer__link">About</a>
-          </button>
-          <button class="btn--sixth">
             <a href="./Contact.html" class="footer__link">Contact</a>
-          </button>
-          <button class="btn btn--primary" style="margin-top: 2rem">
-            <a href="#" style="text-decoration: none; color: var(--color-White)"
-              >Get Started</a
-            >
-          </button>
+            <a class="btn btn--primary GetStartbtn" href="#">Get Started</a>
         </div>
         <div class="footer__contact-us">
-          <a class="contact-us--link" href="mailto:youremail@mail.com"
+          <a class="footer__contact-link" href="mailto:youremail@mail.com"
             ><img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
             />youremail@mail.com</a
-          ><a class="contact-us--link" href="https://instagram.com"
+          ><a class="footer__contact-link" href="https://instagram.com"
             ><img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
             />instagram</a
-          ><a class="contact-us--link" href="https://maps.google.com"
+          ><a class="footer__contact-link" href="https://maps.google.com"
             ><img
               src="./Assets/Icon/Vector (1).svg"
               class="footer__contact-icons"
             />Loction</a
           >
+        </div>
+        <div class="footer__lineBetween"></div>
+        <div class="footer__joinUpdates">
+          <p class="joinUpdates__Title">Join to get free updates every week.</p>
+          <form class="joinUpdates__InputContainer"><input class="joinUpdates__emailInput" type="email" placeholder="Email Address"><button class="btn btn--primary" type="submit">Subscribe</button></form>
         </div>
         <div class="footer__copyright">
           <p>&copy;2023 MU.AI</p>
