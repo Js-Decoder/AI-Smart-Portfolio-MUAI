@@ -248,13 +248,13 @@
   margin-top: 2.1rem;
   width: 35rem;
   height: 26.454rem;
-  background-image: url('/new/Assets/Images/1-Phone.png');
+  background-image: url("/new/Assets/Images/1-Phone.png");
 }
 .Hero__container__Section-Two__img2 {
   margin-top: 2.1rem;
   width: 35rem;
   height: 26.5rem;
-  background-image: url('/new/Assets/Images/2-Phone.png');
+  background-image: url("/new/Assets/Images/2-Phone.png");
 }
 @media screen and (min-width: 0) and (max-width: 1200px) {
   .Hero__Sub {
@@ -501,13 +501,13 @@
     margin: 0;
     width: 23.389rem;
     height: 26.454rem;
-    background-image: url('/new/Assets/Images/1-Tablet.png');
+    background-image: url("/new/Assets/Images/1-Tablet.png");
   }
   .Hero__container__Section-Two__img2 {
     margin-top: 1rem;
     width: 48.553rem;
     height: 26.454rem;
-    background-image: url('/new/Assets/Images/2-Tablet.png');
+    background-image: url("/new/Assets/Images/2-Tablet.png");
   }
   .WhyCustomers {
     padding: 10rem 4rem 10rem 4rem;
@@ -655,13 +655,13 @@
   .Hero__container__Section-Two__img1 {
     width: 23.389rem;
     height: 26.454rem;
-    background-image: url('/new/Assets/Images/1-Desktop.png');
+    background-image: url("/new/Assets/Images/1-Desktop.png");
   }
   .Hero__container__Section-Two__img2 {
     margin-top: 1rem;
     width: 48.553rem;
     height: 26.454rem;
-    background-image: url('/new/Assets/Images/2-Desktop.png');
+    background-image: url("/new/Assets/Images/2-Desktop.png");
   }
   .WhyCustomers__Section-One-Title {
     font-size: var(--font-size-H3);
