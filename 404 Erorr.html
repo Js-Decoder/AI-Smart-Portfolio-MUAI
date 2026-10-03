@@ -2,51 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Error - MUAI</title>
-    <link rel="stylesheet" href="./Css/Fonts.css" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found (404) | MUAI</title>
+
+    <!-- Fonts: only Poppins, only the weights the design uses -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+    />
+
     <link rel="stylesheet" href="./Css/Common.css" />
-    <link rel="stylesheet" href="./Css/Header&Footer.css" />
+    <link rel="stylesheet" href="./Css/Header-Footer.css" />
     <link rel="stylesheet" href="./Css/404Page.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="main-header">
-      <nav class="nav container">
-        <a href="./Home.html" class="nav__logo" style="text-decoration: none"
-          >MUAI</a
-        >
+      <nav class="nav" aria-label="Main">
+        <a href="./Home.html" class="nav__logo">MUAI</a>
         <button
-  class="nav__toggle"
-  type="button"
-  aria-label="Open navigation menu"
-  aria-expanded="false"
-  aria-controls="main-navigation"
->
-          <div class="bar bar-one"></div>
-          <div class="bar bar-two"></div></button>
-        <ul class="list nav__list">
-          <li class="nav__item"><a href="./Home.html">Home</a></li>
-          <li class="nav__item"><a href="./Princing.html">Princing</a></li>
-          <li class="nav__item"><a href="./About.html">About</a></li>
-          <li class="nav__item"><a href="./Contact.html">Contact</a></li>
-        </ul>
-        <ul class="list nav__list">
+          class="nav__toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-navigation nav-cta"
+        >
+          <span class="nav__bar nav__bar--top"></span>
+          <span class="nav__bar nav__bar--bottom"></span>
+        </button>
+        <ul class="nav__list" id="main-navigation">
           <li class="nav__item">
-            <a
-              href="#"
-              class="btn btn--primary"
-              style="
-                font-size: var(--font-size-body2);
-                color: var(--color-white);
-                padding: 1.3rem;
-              "
+            <a class="nav__link" href="./Home.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./Pricing.html">Pricing</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./About.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./Contact.html">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav__list" id="nav-cta">
+          <li class="nav__item">
+            <a href="#" class="btn btn--primary btn--sm nav__cta"
               >Get Started</a
             >
           </li>
         </ul>
       </nav>
     </header>
+
     <section class="container">
       <div class="error404">
         <p class="error404__title">404</p>
@@ -59,53 +70,87 @@
         </p>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__glow"></div>
+        <div class="footer__glow" aria-hidden="true"></div>
         <p class="footer__logo">MUAI</p>
-        <div class="footer__pages">
+        <nav class="footer__pages" aria-label="Footer">
           <a href="./Home.html" class="footer__link">Home</a>
-          <a href="./Princing.html" class="footer__link">Princing</a>
+          <a href="./Pricing.html" class="footer__link">Pricing</a>
           <a href="./About.html" class="footer__link">About</a>
           <a href="./Contact.html" class="footer__link">Contact</a>
           <a class="btn btn--primary footer__cta" href="#">Get Started</a>
-        </div>
+        </nav>
         <div class="footer__contact-us">
-          <a class="footer__contact-link" href="mailto:youremail@mail.com"
-            ><img
+          <a class="footer__contact-link" href="mailto:youremail@mail.com">
+            <img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
-            />youremail@mail.com</a
-          ><a class="footer__contact-link" href="https://instagram.com"
-            ><img
+              alt=""
+              width="18"
+              height="21"
+            />
+            youremail@mail.com
+          </a>
+          <a
+            class="footer__contact-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
               src="./Assets/Icon/Vector.svg"
               class="footer__contact-icons"
-            />instagram</a
-          ><a class="footer__contact-link" href="https://maps.google.com"
-            ><img
+              alt=""
+              width="18"
+              height="21"
+            />
+            Instagram
+          </a>
+          <a
+            class="footer__contact-link"
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
               src="./Assets/Icon/Vector (1).svg"
               class="footer__contact-icons"
-            />Loction</a
-          >
+              alt=""
+              width="18"
+              height="21"
+            />
+            Location
+          </a>
         </div>
-        <div class="footer__lineBetween"></div>
-        <div class="footer__joinUpdates">
-          <p class="joinUpdates__Title">Join to get free updates every week.</p>
-          <form class="joinUpdates__InputContainer">
+        <div class="footer__divider" aria-hidden="true"></div>
+        <div class="footer__newsletter">
+          <p class="newsletter__title">Join to get free updates every week.</p>
+          <form class="newsletter__form" action="#">
+            <label class="visually-hidden" for="newsletter-email"
+              >Email address</label
+            >
             <input
-              class="joinUpdates__emailInput"
+              id="newsletter-email"
+              class="newsletter__input"
               type="email"
+              name="email"
               placeholder="Email Address"
-            /><button class="btn btn--primary" type="submit">Subscribe</button>
+              autocomplete="email"
+              required
+            />
+            <button class="btn btn--primary" type="submit">Subscribe</button>
           </form>
         </div>
         <div class="footer__copyright">
-          <p>&copy;2023 MU.AI</p>
+          <p>&copy; <span data-current-year>2026</span> MU.AI</p>
           <p>All Rights Reserved</p>
-          <p>Privacy Policy | Terms Of Service</p>
+          <p>Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>
-    <script src="./js/mian.js"></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

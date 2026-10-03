@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Header-Footer.css — main header / navigation and site footer
+   Mobile-first. Breakpoints: 812px (desktop nav + footer), 1200px (wide).
+   If you change 812px here, change DESKTOP_QUERY in js/main.js too.
+   ========================================================================== */
+
+/* ---------- Main header ---------- */
+.main-header {
+  background-color: var(--color-white);
+  margin: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__logo {
+  color: var(--color-primary100);
+  font-size: var(--font-size-body2);
+}
+
+.nav__toggle {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--color-black100);
+  border-radius: 5px;
+  transition:
+    transform 0.4s ease-out,
+    margin 0.4s ease-out;
+}
+
+.nav--expanded .nav__bar--top {
+  transform: rotate(-45deg) translate(-9px, 0);
+  margin: 10px 0;
+}
+
+.nav--expanded .nav__bar--bottom {
+  transform: rotate(45deg) translate(-9px, 0);
+  margin: 10px 0;
+}
+
+/* Collapsed on mobile. visibility:hidden also removes the links from the
+   keyboard tab order and from screen readers while the menu is closed. */
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    visibility 0s linear 0.4s;
+}
+
+.nav--expanded .nav__list {
+  max-height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    visibility 0s;
+}
+
+.nav__item {
+  font-size: var(--font-size-p2);
+}
+
+/* Class selectors (not ".nav__item > a") so they never fight with .btn */
+.nav__link {
+  display: block;
+  padding: 0.5rem;
+  color: var(--color-black50);
+}
+
+.nav__link:hover {
+  color: var(--color-primary100);
+}
+
+.nav__cta {
+  display: block;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  width: 100%;
+  padding: 5rem 2rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: min(100%, 35rem);
+  margin-inline: auto;
+  padding: 2rem 4rem 4rem 5.5rem;
+  background-color: var(--color-black100);
+  border-radius: 6rem;
+}
+
+.footer__pages,
+.footer__contact-us,
+.footer__copyright,
+.footer__glow {
+  margin-bottom: 3rem;
+}
+
+.footer__glow {
+  flex-shrink: 0;
+  width: 28.4rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 99px 0 var(--color-primary100);
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+  font-size: var(--font-size-h5);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.footer__pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__link {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-p1);
+  font-weight: 300;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.footer__cta {
+  margin-top: 2rem;
+}
+
+.footer__contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: var(--font-size-p2);
+  color: var(--color-white);
+}
+
+.footer__contact-icons {
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 2.098rem;
+}
+
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.footer__copyright p {
+  font-size: var(--font-size-p2);
+  font-weight: 300;
+}
+
+/* Desktop-only parts, hidden on mobile */
+.footer__divider,
+.footer__newsletter {
+  display: none;
+}
+
+/* ---------- Desktop (>= 812px) ---------- */
+@media (min-width: 812px) {
+  .main-header {
+    margin: 4rem;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+  }
+
+  .nav__item {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+  }
+
+  .nav__link {
+    padding-bottom: 1rem;
+  }
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    padding: 5rem 0 0 0;
+  }
+
+  .footer__container {
+    justify-content: center;
+    width: 100%;
+    padding: 5rem 4rem;
+    border-radius: 0;
+  }
+
+  .footer__glow,
+  .footer__cta {
+    display: none;
+  }
+
+  .footer__pages {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer__contact-us {
+    flex-direction: row;
+    gap: 4rem;
+    margin-bottom: 0;
+  }
+
+  .footer__contact-link {
+    font-size: var(--font-size-p1);
+  }
+
+  .footer__divider {
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin: 4rem 0;
+    background-color: var(--color-black50);
+  }
+
+  .footer__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.3rem;
+    width: 80%;
+    margin-bottom: 4rem;
+    padding: 5.5rem 0;
+    border: 1px solid #585858;
+    border-radius: 60px;
+    background-color: var(--color-black75);
+  }
+
+  .newsletter__title {
+    font-size: var(--font-size-h5);
+    color: var(--color-white);
+  }
+
+  .newsletter__form {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 1rem 2rem;
+    font-size: var(--font-size-p1);
+    background-color: var(--color-black100);
+    border-radius: 15px 44px;
+  }
+
+  .newsletter__form:focus-within {
+    outline: 2px solid var(--color-black50);
+  }
+
+  .newsletter__input {
+    flex: 1;
+    min-width: 0;
+    font-size: var(--font-size-p1);
+    color: var(--color-white);
+    background-color: var(--color-black100);
+    border: 0;
+  }
+
+  /* The form shows its own focus ring (:focus-within above) */
+  .newsletter__input:focus-visible {
+    outline: none;
+  }
+
+  .newsletter__input::placeholder {
+    color: var(--color-black20); /* different from typed text, so empty vs filled is clear */
+  }
+
+  .footer__copyright {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 0;
+  }
+
+  .footer__copyright p {
+    font-size: var(--font-size-p1);
+  }
+}
+
+/* ---------- Wide (>= 1200px) ---------- */
+@media (min-width: 1200px) {
+  .nav__logo {
+    font-size: var(--font-size-h5);
+  }
+
+  .nav__item {
+    padding: 1rem 2rem;
+    font-size: var(--font-size-p1);
+  }
+
+  .footer__container {
+    padding: 5rem;
+  }
+
+  .footer__newsletter {
+    flex-direction: row;
+    padding: 5.5rem;
+  }
+
+  .newsletter__title {
+    text-wrap: balance;
+  }
+}
