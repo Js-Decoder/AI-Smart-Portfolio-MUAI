@@ -1,42 +1,64 @@
-/* 404 Page */
-.container {
+/* ==========================================================================
+   404Page.css — 404 page only
+   Scrollbar styles moved to Common.css.
+   ========================================================================== */
+
+.error404-page {
   width: clamp(39rem, 1.2rem + 73vw, 100rem);
+  max-width: calc(100% - 4rem); /* never wider than the screen minus 2rem each side */
   margin-inline: auto;
 }
+
 .error404 {
-  background-color: var(--color-primaray100);
-  border-radius: 60px;
   padding: 12.9rem 0;
+  border-radius: 60px;
   text-align: center;
+  background-color: var(--color-primary100);
 }
+
 .error404__title {
-  font-size: var(--font-size-h5);
-  color: var(--color-white);
   margin-bottom: 2rem;
+  font-size: var(--font-size-h5);
   font-weight: 400;
+  color: var(--color-white);
 }
+
 .error404__message {
   font-size: var(--font-size-p2);
+  font-weight: 300;
   color: var(--color-white);
-  font-weight: 200;
 }
+
+/* Underlined so the link is recognisable without relying on colour */
 .error404__link {
-  color: var(--color-white);
-  text-decoration: none;
+  text-decoration: underline;
 }
-/* Scroll */
-::-webkit-scrollbar {
-  width: 10px;
-  /* display: none; */
+
+/* Tablet (>= 812px) */
+@media (min-width: 812px) {
+  .error404__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .error404__message {
+    font-size: var(--font-size-body2);
+    font-weight: var(--font-weight-body);
+  }
+
+  /* One line on bigger screens */
+  .error404__br {
+    display: none;
+  }
 }
-::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: var(--color-black10);
-  /* display: none; */
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 4.5px;
-  margin: 5px;
-  background-color: var(--color-primaray100);
-  /* display: none; */
+
+/* Desktop (>= 1200px) */
+@media (min-width: 1200px) {
+  .error404__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .error404__message {
+    font-size: var(--font-size-p1);
+    font-weight: var(--font-weight-p);
+  }
 }

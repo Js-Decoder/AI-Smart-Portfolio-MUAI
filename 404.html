@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | MUAI</title>
+    <meta name="robots" content="noindex" />
+    <title>Page not found (404) | MUAI</title>
 
     <!-- Fonts: only Poppins, only the weights the design uses -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +16,7 @@
 
     <link rel="stylesheet" href="./Css/Common.css" />
     <link rel="stylesheet" href="./Css/Header-Footer.css" />
+    <link rel="stylesheet" href="./Css/404Page.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -43,7 +45,7 @@
             <a class="nav__link" href="./About.html">About</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./Contact.html" aria-current="page">Contact</a>
+            <a class="nav__link" href="./Contact.html">Contact</a>
           </li>
         </ul>
         <ul class="nav__list" id="nav-cta">
@@ -56,8 +58,14 @@
       </nav>
     </header>
 
-    <main id="main">
-      <h1>Not yet ready kiyomarth</h1>
+    <main id="main" class="error404-page">
+      <div class="error404">
+        <h1 class="error404__title">404</h1>
+        <p class="error404__message">
+          Well, something is not right here.<br class="error404__br" />
+          <a class="error404__link" href="./Home.html">back to home!</a>
+        </p>
+      </div>
     </main>
 
     <footer class="footer">

@@ -1,16 +1,29 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - MUAI</title>
-    <link rel="stylesheet" href="./Css/Fonts.css" />
+    <meta
+      name="description"
+      content="MUAI is an AI chat app that helps you simplify your work and boost your productivity."
+    />
+    <title>Home | MUAI</title>
+
+    <!-- Fonts: only Poppins, only the weights the design uses -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+    />
+
     <link rel="stylesheet" href="./Css/Common.css" />
-    <link rel="stylesheet" href="./Css/Home.css" />
     <link rel="stylesheet" href="./Css/Header-Footer.css" />
+    <link rel="stylesheet" href="./Css/Home.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="main-header">
       <nav class="nav" aria-label="Main">
         <a href="./Home.html" class="nav__logo">MUAI</a>
@@ -26,7 +39,7 @@
         </button>
         <ul class="nav__list" id="main-navigation">
           <li class="nav__item">
-            <a class="nav__link" href="./Home.html">Home</a>
+            <a class="nav__link" href="./Home.html" aria-current="page">Home</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="./Pricing.html">Pricing</a>
@@ -47,174 +60,158 @@
         </ul>
       </nav>
     </header>
-    <section class="Hero">
-      <div class="Hero__container">
-        <div class="Hero__container__Section-One">
-          <div>
-            <p class="Hero__part1-title">Simplify your work with AI tool</p>
-            <p class="Hero__part1-p">
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__container">
+          <div class="hero__intro">
+            <h1 class="hero__title" id="hero-title">
+              Simplify your work with AI tool
+            </h1>
+            <p class="hero__text">
               Unleash the power of AI within Brainwave. Upgrade your
               productivity with Brainwave, the open AI chat app.
             </p>
-          </div>
-          <div class="Hero__Btns">
-            <button class="btn btn--primary Hero__Btns__GetstartedfreeBtn">
-              Get Started Free
-            </button>
-            <button class="btn btn--secondray Hero__Btns__EXploreBtn">
-              EXplore
-            </button>
-          </div>
-          <form class="Hero__Sub" action="get_data.php" method="post">
-            <h5 style="text-align: left">
-              Join to get free updates every week.
-            </h5>
-            <div class="Email-Sender">
-              <input
-                type="email"
-                class="email-input"
-                autocomplete="on"
-                required
-                placeholder="Email Address"
-                style="width: 182.5px"
-              />
-              <input
-                type="submit"
-                value="Subscribe"
-                class="btn btn--primary Sub-btn"
-                style="width: 166px"
-              />
+            <div class="hero__actions">
+              <button class="btn btn--primary hero__btn" type="button">
+                Get Started Free
+              </button>
+              <button class="btn btn--outline hero__btn" type="button">
+                Explore
+              </button>
             </div>
-          </form>
-        </div>
-        <div class="Hero__container__Section-Two">
-          <div class="Hero__container__Section-Two__part1">
-            <div class="numb-up-users">01</div>
-            <div class="Hero__Rectangle">
-              <p class="numbOfUser" style="color: var(--color-White)">200+</p>
-              <p
-                class="Hero__Rectangle__Part2"
-                style="color: var(--color-White)"
-              >
-                User
+            <form class="hero__subscribe" action="get_data.php" method="post">
+              <p class="hero__subscribe-title">
+                Join to get free updates every week.
               </p>
-            </div>
-            <div class="Hero__Rectangle Trend">
-              <p class="TrendAi" style="color: var(--color-White)">Trend Al</p>
-              <p
-                class="Hero__Rectangle__Part2"
-                style="color: var(--color-White)"
-              >
-                1 Rank
-              </p>
-            </div>
+              <div class="hero__subscribe-field">
+                <label class="visually-hidden" for="hero-email"
+                  >Email address</label
+                >
+                <input
+                  id="hero-email"
+                  class="hero__subscribe-input"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  autocomplete="email"
+                  required
+                />
+                <button class="btn btn--primary hero__subscribe-btn" type="submit">
+                  Subscribe
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="Hero__container__Section-Two__img1"></div>
-          <div class="Hero__container__Section-Two__img2"></div>
+          <div class="hero__showcase">
+            <div class="hero__stats">
+              <div class="hero__badge">01</div>
+              <div class="hero__stat">
+                <p class="hero__stat-value">200+</p>
+                <p class="hero__stat-label">User</p>
+              </div>
+              <div class="hero__stat hero__stat--trend">
+                <p class="hero__stat-value">Trend AI</p>
+                <p class="hero__stat-label">1 Rank</p>
+              </div>
+            </div>
+            <!-- TODO: if these screenshots carry meaning, switch to <img alt="..."> -->
+            <div class="hero__image hero__image--first"></div>
+            <div class="hero__image hero__image--second"></div>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="WhyCustomers">
-      <p class="WhyCustomers__Section-One-Title">why customers</p>
-      <h5 class="WhyCustomers__Section-One-Title-2">love us</h5>
-      <div class="WhyCustomers__Section-Two">
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__Musideri"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Musideri</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
+      </section>
+
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <h2 class="testimonials__title" id="testimonials-title">
+          why customers
+          <span class="testimonials__title-accent">love us</span>
+        </h2>
+        <div class="testimonials__list">
+          <article class="testimonial">
+            <h3 class="testimonial__name">Musideri</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
+          <article class="testimonial">
+            <h3 class="testimonial__name">Ghozi Arslan</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
+          <article class="testimonial testimonial--hide-on-tablet">
+            <h3 class="testimonial__name">Pakde Siti</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
+          <article class="testimonial">
+            <h3 class="testimonial__name">Nandarea</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
+          <article class="testimonial">
+            <h3 class="testimonial__name">Muklisea</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
+          <article class="testimonial testimonial--hide-on-tablet">
+            <h3 class="testimonial__name">Mumuh lis</h3>
+            <p class="testimonial__text">
+              I recently used an AI chat system and it exceeded my expectations.
+              The speed and accuracy of the responses were impressive, and the
+              personalized recommendations w
+            </p>
+          </article>
         </div>
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__GhoziArslan"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Ghozi Arslan</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div class="faq__container">
+          <div class="faq__intro">
+            <h2 class="faq__title" id="faq-title">
+              FAQs Frequently Asked Questions!
+            </h2>
+            <p class="faq__text">
+              Need Any Help? Send us a message using the form below and we'll
+              get back to you promptly!
+            </p>
+          </div>
+          <!-- TODO: replace each empty item with <details><summary>Question</summary>Answer</details> -->
+          <div class="faq__list">
+          <div class="faq__item"></div>
+          <div class="faq__item"></div>
+          <div class="faq__item"></div>
+          <div class="faq__item"></div>
+          <div class="faq__item"></div>
+          <div class="faq__item"></div>
+          </div>
+          <div class="faq__banner">
+            <h3 class="faq__banner-title">Still Need Help?</h3>
+            <p class="faq__banner-text">
+              Can't find the answer here? Message us for help!
+            </p>
+            <a class="btn btn--outline-light" href="./Contact.html"
+              >Shoot Us A Message!</a
+            >
+          </div>
         </div>
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__PakdeSiti"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Pakde Siti</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
-        </div>
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__Nandarea"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Nandarea</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
-        </div>
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__Muklisea"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Muklisea</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
-        </div>
-        <div
-          class="WhyCustomers__Section-Two__item WhyCustomers__Section-Two__item__Mumuhlis"
-        >
-          <p class="WhyCustomers__Section-Two__item__Title">Mumuh lis</p>
-          <p class="WhyCustomers__Section-Two__item__Description">
-            I recently used an AI chat system and it exceeded my expectations.
-            The speed and accuracy of the responses were impressive, and the
-            personalized recommendations w
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="FaqQuestions">
-      <div class="FaqQuestions__container">
-        <div class="FaqQuestions__container__Item">
-          <p class="FaqQuestions__container__Item__Title">
-            FAQs Frequently Asked Questions!
-          </p>
-          <p class="FaqQuestions__container__Item__p">
-            Need Any Help? Send us a message using the form below and we'll get
-            back to you promptly!
-          </p>
-        </div>
-        <div class="FaqQuestions__container__item__According">
-          <div class="FaqQuestions__container__item__According__item"></div>
-          <div class="FaqQuestions__container__item__According__item"></div>
-          <div class="FaqQuestions__container__item__According__item"></div>
-          <div class="FaqQuestions__container__item__According__item"></div>
-          <div class="FaqQuestions__container__item__According__item"></div>
-          <div class="FaqQuestions__container__item__According__item"></div>
-        </div>
-        <div class="FaqQuestions__container__Item__Banner">
-          <p class="FaqQuestions__container__Item__Banner__title">
-            Still Need Help?
-          </p>
-          <p class="FaqQuestions__container__Item__Banner__p">
-            Can't find the answer here? Message us for help!
-          </p>
-          <button
-            class="btn btn--fifth"
-            style="padding: 1.6rem 2rem 1.6rem 2rem; margin-bottom: 0"
-          >
-            Shoot Us A Message!
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
+
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__glow" aria-hidden="true"></div>
@@ -294,6 +291,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/mian.js"></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

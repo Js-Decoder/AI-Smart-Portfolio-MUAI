@@ -210,6 +210,28 @@ p {
   }
 }
 
+/* ---------- Scrollbar (one place for the whole site) ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--color-black10);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4.5px;
+  background-color: var(--color-primary100);
+}
+
+/* Firefox does not support ::-webkit-scrollbar */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: var(--color-primary100) var(--color-black10);
+  }
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;

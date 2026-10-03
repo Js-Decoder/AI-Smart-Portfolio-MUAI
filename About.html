@@ -2,15 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - MUAI</title>
-    <link rel="stylesheet" href="./Css/Fonts.css" />
+    <title>About | MUAI</title>
+
+    <!-- Fonts: only Poppins, only the weights the design uses -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+    />
+
     <link rel="stylesheet" href="./Css/Common.css" />
     <link rel="stylesheet" href="./Css/Header-Footer.css" />
-    <link rel="stylesheet" href="./Css/About.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="main-header">
       <nav class="nav" aria-label="Main">
         <a href="./Home.html" class="nav__logo">MUAI</a>
@@ -32,7 +40,7 @@
             <a class="nav__link" href="./Pricing.html">Pricing</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./About.html">About</a>
+            <a class="nav__link" href="./About.html" aria-current="page">About</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="./Contact.html">Contact</a>
@@ -47,9 +55,11 @@
         </ul>
       </nav>
     </header>
-    <h1 style="color: var(--color-primaray100); font-weight: bolder">
-      Not yet ready kiyomarth
-    </h1>
+
+    <main id="main">
+      <h1>Not yet ready kiyomarth</h1>
+    </main>
+
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__glow" aria-hidden="true"></div>
@@ -129,6 +139,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/mian.js"></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
